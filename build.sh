@@ -83,7 +83,7 @@ TMPDIR=${TMPDIR:-/tmp}
 rm -f libblst.a
 trap '[ $? -ne 0 ] && rm -f libblst.a; rm -f *.o ${TMPDIR}/*.blst.$$' 0
 
-if [ ! noarchive ]; then
+if [ ! $noarchive ]; then
   (set -x; ${CC} ${CFLAGS} -c ${TOP}/src/server.c)
   (set -x; ${CC} ${CFLAGS} -c ${TOP}/build/assembly.S)
   (set -x; ${AR} rc libblst.a *.o)
