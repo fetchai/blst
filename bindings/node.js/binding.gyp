@@ -34,7 +34,7 @@
           'variables': { 'cmd' : [ 'blst_wrap.py', '../blst.swg' ] },
           'inputs':  [ '<@(cmd)' ],
           'outputs': [ '<(INTERMEDIATE_DIR)/blst_wrap.cpp' ],
-          'action':  [ 'python', '<@(cmd)', '<@(_outputs)' ],
+          'action':  [ 'python3', '<@(cmd)', '<@(_outputs)' ],
         },
       ],
     },
